@@ -75,7 +75,7 @@ const Navbar = () => {
                         {
                             Links.map((link, _ind) => {
                                 return (
-                                    <li id={link.path + _ind} className={`${isActive(link.path) ? "text-rose-500" : ""} `}>
+                                    <li key={link.path + _ind} className={`${isActive(link.path) ? "text-rose-500" : ""} `}>
                                         <Link href={link.path} className="flex items-center p-2  rounded-lg  hover:bg-gray-100 ">
                                             <link.icon className="w-5 h-5 transition duration-7" />
 
