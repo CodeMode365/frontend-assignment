@@ -8,9 +8,13 @@ export interface cartItem extends ProductType {
     quantity: number;
     totalAmount: number;
 }
-
-// const initialData: cartItem[] = JSON.parse(localStorage.getItem("cartItems") as string) as cartItem[] || [];
-const initialData: cartItem[] = []
+let initialData: cartItem[]
+if (typeof window !== "undefined") {
+    initialData = JSON.parse(localStorage.getItem("cartItems") as string) as cartItem[] || [];
+} else {
+    initialData = []
+}
+// const initialData: cartItem[] = []
 
 function changeQuantity(filteringeItem: cartItem, state: cartItem[], operation: string): cartItem[] {
     const filteredCart = state.filter((item: cartItem) => item.id !== filteringeItem.id)
