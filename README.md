@@ -69,7 +69,7 @@ The application will be available at http://localhost:3000.
 
 
 ## Project Structure
-The project structure follows a modular approach to enhance maintainability and scalability. Here's an overview of the main directories and files:
+The project structure follows a modular approach to enhance maintainability and scalability. 
 
 
 ## Available Scripts
