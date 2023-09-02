@@ -12,11 +12,11 @@ const Products = () => {
   const { data, isLoading, isError }: { data: any, isLoading: boolean, isError: boolean } = useFetch()
 
   return (
-    <div className='mt-32'>
+    <div className='mt-32 px-14'>
       <h2>Products</h2>
       <div className="flex w-full items-center space-x-2 justify-end " >
         <Input type="text" placeholder="Search" className='max-w-sm' />
-        <Button type="submit" className='bg-rose-600 hover:bg-rose-600'>Subscribe</Button>
+        <Button type="submit" className='bg-rose-600 hover:bg-rose-600'>Search</Button>
       </div>
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-10 m-4'>
         {
