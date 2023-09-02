@@ -12,8 +12,7 @@ const SingleCard = ({ ...data }) => {
 
 
     return (
-
-        <Card>
+        <Card className='my-1'>
             <CardContent>
                 <div className=' relative pb-72 overflow-hidden cursor-pointer'>
                     <Link href={`products/${data.id}`}>
@@ -36,7 +35,7 @@ const SingleCard = ({ ...data }) => {
                     </h4>
                 </div>
             </CardContent>
-            <CardFunctionality title={data.title}/>
+            <CardFunctionality data={data}/>
         </Card>
     )
 }
