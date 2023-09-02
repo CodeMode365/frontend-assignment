@@ -3,7 +3,7 @@ import { AiFillShopping } from 'react-icons/ai'
 
 const Footer = () => {
     return (
-        <footer className="bg-white rounded-lg shadow m-4 absolute bottom-0">
+        <footer className="bg-white rounded-lg shadow m-4 absolute -bottom-4 w-[95%]">
             <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
                 <div className="sm:flex sm:items-center sm:justify-between">
                     <a href="https://flowbite.com/" className="flex items-center mb-4 sm:mb-0">
