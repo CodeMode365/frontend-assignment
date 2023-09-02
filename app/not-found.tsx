@@ -9,8 +9,8 @@ const NotFound = () => {
     <div className='w-screen h-screen flex items-center justify-center mt-16 max-w-screen-xl max-h-screen-lg'>
       <div className='h-20 -translate-y-full w-[350px] md:w-[450px]'>
         <div className='text-center'>
-          <h2 className='text-xl font-bold'>Something went wrong!</h2>
-          <p className=''>The page you are trying to navigate doesn&apos;t exist or somehing went wrong while trying to navigate. Trying reloading the page or go to Home page.</p>
+          <h2 className='text-3xl font-bold'>Something went wrong!</h2>
+          <p className='leading-6 my-2'>The page you are trying to navigate doesn&apos;t exist or somehing went wrong while trying to navigate. Trying reloading the page or go to Home page.</p>
         </div>
         <div className='mx-auto flex justify-center my-2'>
           <Button variant={'destructive'} className='mx-2' onClick={() => router.push("/")}>Go Home</Button>
