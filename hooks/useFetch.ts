@@ -16,7 +16,6 @@ const useFetch = (id?: number) => {
         queryFn: () => {
             try {
                 const data = axios(endPoint)
-                console.log("*******fetch*******")
                 return data
             } catch (error) {
                 console.log(error)
