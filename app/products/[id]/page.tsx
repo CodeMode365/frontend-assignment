@@ -9,14 +9,14 @@ import { useRouter } from 'next/navigation'
 import { useToast, } from '@/components/ui/use-toast'
 import { ToastAction } from "@/components/ui/toast"
 import { Badge } from '@/components/ui/badge'
+import { useSelector } from 'react-redux'
+import { RootState } from '@/Providers/Redux/store'
 
 const SingleCard = () => {
     const { id } = useParams()
     const router = useRouter()
     const { data, isLoading, isError } = useFetch(Number(id))
     const { toast } = useToast()
-    // const { description } = data && data?.data
-    console.log(data)
     return data ?
         (
             <div className='mt-32 mx-6' >
