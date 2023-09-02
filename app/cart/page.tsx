@@ -61,8 +61,8 @@ const Cart = () => {
                   <h2 className='text-2xl font-bold border-b'>SubTotal</h2>
                 </CardHeader>
                 <CardContent className='my-4 b-t-1 text-lg'>
-                  <h2 className='text-semibold text-lg'>Total Items: <span className='text-black/80'>{cartItems.length}</span></h2>
-                  <h2 className='text-semibold text-lg'>Total Price: <span className='text-black/80 text-yellow-500'> ${totalAmount}</span></h2>
+                  <h2 className='text-semibold text-xl'>Total Items: <span className='text-black/80'>{cartItems.length}</span></h2>
+                  <h2 className='text-semibold text-xl'>Total Price: <span className='text-black/80 text-yellow-500'> ${totalAmount}</span></h2>
                 </CardContent>
               </Card>
             </div>

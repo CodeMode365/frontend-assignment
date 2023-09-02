@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className + " max-w-screen-xl mx-auto relative pb-44"}>
+      <body className={inter.className + " max-w-screen-xl mx-auto relative pb-44 min-h-screen "}>
         <StateProvider>
           <TanstackProvider>
             <Navbar />

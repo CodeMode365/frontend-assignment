@@ -20,7 +20,7 @@ const Products = () => {
   const handleSearch = useCallback(() => {
 
     if (data) {
-      const filteredData = finalData.data.filter((item: ProductType) =>
+      const filteredData = data.data.filter((item: ProductType) =>
         item.title.toLowerCase().includes(searchQuery.toLowerCase())
       );
 
@@ -34,7 +34,9 @@ const Products = () => {
 
 
   useEffect(() => {
-    setFinalData(data || { data: [] })
+    if (data) {
+      setFinalData(data || { data: [] })
+    }
   }, [data]);
 
   return (
@@ -50,14 +52,14 @@ const Products = () => {
           />
           <Button type="submit" className='bg-rose-600 hover:bg-rose-600' onClick={handleSearch}>Search</Button>
         </div>
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mt-10 m-4'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-10 m-4'>
           {
             finalData &&
             finalData.data.map((item: ProductType) => {
               return <SingleCard {...item} key={item.id} />
             })
           }
-          {finalData && finalData.data.length <=0 && (
+          {finalData && finalData.data.length <= 0 && (
             <h2 className='text-red-400 text-2xl font-medium min-w-[270px]'>No Items Matched</h2>
           )}
           {isLoading && !data && (
